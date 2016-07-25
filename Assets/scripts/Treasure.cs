@@ -16,10 +16,12 @@ using UnityEngine.SceneManagement;
 	
 	// Update is called once per frame
 	void Update () {
-		if ( (PlayerCharacter.position - transform.position).magnitude < 3f ) {
+		if ( (PlayerCharacter.position - transform.position).magnitude < 5f ) {
 			didPlayerWin = true; 
+			Debug.Log ("player can win"); 
 		}
-			if (Input.GetKeyDown (KeyCode.Space) ) {
+
+		if ( didPlayerWin == true && Input.GetKeyDown (KeyCode.Space) )  {
 			SceneManager.LoadScene (2);
 		}
 	} 
