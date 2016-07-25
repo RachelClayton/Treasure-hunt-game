@@ -5,6 +5,7 @@ public class followplayer : MonoBehaviour {
 	public GameObject player;
 	public float speed;
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -14,6 +15,8 @@ public class followplayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 		GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 		if(Input.GetKey(KeyCode.A)){
 			GetComponent<Rigidbody2D> ().velocity += Vector2.left*speed;
